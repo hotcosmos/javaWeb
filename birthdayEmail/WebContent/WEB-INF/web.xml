@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>birthdayEmail</display-name>
+  
+  <!-- 配置监视器 -->
+  <listener>
+  	<listener-class>com.cosmos.Listener.BirthdayListener</listener-class>
+  </listener>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>BirthdayServlet</display-name>
+    <servlet-name>BirthdayServlet</servlet-name>
+    <servlet-class>com.cosmos.web.BirthdayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BirthdayServlet</servlet-name>
+    <url-pattern>/birthday</url-pattern>
+  </servlet-mapping>
+</web-app>
